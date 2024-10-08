@@ -10,10 +10,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  root to: "pages#home"
-
-  resources :gnomes, only: [:new, :create, :edit, :update, :index, :show] do
-    resources :bookings, only: :create
-  end
-  resources :bookings, only: :destroy
+  resources :gnomes
 end
