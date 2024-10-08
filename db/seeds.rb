@@ -4,6 +4,14 @@ Booking.destroy_all
 
 Gnome.destroy_all
 
+User.destroy_all
+
+puts "Creating users..."
+
+User.create!(email: 'user1@example.com', password: 'password123')
+User.create!(email: 'user2@example.com', password: 'password123')
+User.create!(email: 'user3@example.com', password: 'password123')
+
 puts "Creating gnomes..."
 
 Gnome.create!(name: "Gnome with spade", description: "A gnome with a spade", price: 9.99)
@@ -27,4 +35,4 @@ Gnome.create!(name: "Gnome with shovel", description: "A gnome holding a small s
 Gnome.create!(name: "Gnome with flowers", description: "A gnome holding a bouquet of flowers", price: 12.50)
 
 
-puts "Seed created! #{Gnom.all.count} gnomes created."
+puts "Seed created! #{User.all.count} users created & #{Gnom.all.count} gnomes created."
