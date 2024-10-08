@@ -1,5 +1,6 @@
 puts "Cleaning DB..."
 # branchsdfsd fsdf
+# sdfsdf
 Booking.destroy_all
 
 Gnome.destroy_all
