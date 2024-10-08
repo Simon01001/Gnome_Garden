@@ -1,4 +1,5 @@
 puts "Cleaning DB..."
+# branchsdfsd fsdf
 # sdfsdf
 Booking.destroy_all
 
