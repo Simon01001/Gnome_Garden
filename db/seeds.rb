@@ -35,4 +35,4 @@ Gnome.create!(name: "Gnome with shovel", description: "A gnome holding a small s
 Gnome.create!(name: "Gnome with flowers", description: "A gnome holding a bouquet of flowers", price: 12.50)
 
 
-puts "Seed created! #{User.all.count} users created & #{Gnom.all.count} gnomes created."
+puts "Seed created! #{User.all.count} users created & #{Gnome.all.count} gnomes created."
