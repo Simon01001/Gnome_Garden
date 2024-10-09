@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @gnome = Gnome.find(params[:gnome_id])
     @booking.gnome = @gnome
+    @booking.user = current_user
+
     if @booking.save
       redirect_to gnome_path(@gnome)
     else
