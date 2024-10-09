@@ -21,6 +21,19 @@ class GnomesController < ApplicationController
     end
   end
 
+
+  def edit
+    @gnome = Gnome.find(params[:id])
+  end
+
+  def update
+    @gnome = Gnome.find(params[:id])
+    @gnome.update(gnome_params)
+    # No need for app/views/restaurants/update.html.erb
+    redirect_to gnome_path(@gnome)
+  end
+
+
   private
 
   def gnome_params

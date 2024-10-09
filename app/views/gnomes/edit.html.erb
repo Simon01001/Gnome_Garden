@@ -1,0 +1,9 @@
+<h1>Edit Gnome Details</h1>
+<%= simple_form_for(@gnome) do |f|%>
+
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :image_path %>
+  <%= f.submit "Submit Gnome" %>
+<% end %>
