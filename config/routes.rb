@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :gnomes do
-    resources :bookings
+    resources :bookings, only: [:create, :destroy]
   end
 end
