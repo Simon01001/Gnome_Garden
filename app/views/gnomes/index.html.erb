@@ -1,9 +1,23 @@
-<h1>Houston, we have liftoff...</h1>
+<div class="container">
+  <h1>We have a great selection of gnomes.</h1>
 
-<ul>
-  <% @gnomes.each do |gnome| %>
-    <li><%= gnome.name %></li>
-    <li><%= gnome.description %></li>
-    <li><%= gnome.price %></li>
-  <% end %>
-</ul>
+  <div class="row">
+    <% @gnomes.each do |gnome| %>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <%= image_tag(gnome.image_path, class: "card-img-top") %>
+          <div class="card-body">
+            <h5 class="card-title"><%= gnome.name %></h5>
+            <p class="card-text"><%= gnome.description %></p>
+            <h5 class="card-title">£ <%= gnome.price %></h5>
+            <div class="d-flex justify-content-between mt-3">
+              <%= link_to 'More Info', gnome_path(gnome), class: "btn btn-primary btn-sm" %>
+              <%= link_to 'Edit', edit_gnome_path(gnome), class: "btn btn-primary btn-sm" %>
+              <%= link_to 'Remove', gnome_path(gnome), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
