@@ -1,5 +1,5 @@
 class AddUserToGnomes < ActiveRecord::Migration[7.1]
   def change
-    add_reference :gnomes, :user, null: false, foreign_key: true
+    add_reference :gnomes, :user, null: true, foreign_key: true
   end
 end
