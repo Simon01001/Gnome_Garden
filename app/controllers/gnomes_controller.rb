@@ -5,6 +5,7 @@ class GnomesController < ApplicationController
 
   def show
     @gnome = Gnome.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
