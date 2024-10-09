@@ -1,1 +1,9 @@
 <h1>Houston, we have liftoff...</h1>
+
+<ul>
+  <% @gnomes.each do |gnome| %>
+    <li><%= gnome.name %></li>
+    <li><%= gnome.description %></li>
+    <li><%= gnome.price %></li>
+  <% end %>
+</ul>
