@@ -16,4 +16,11 @@ Rails.application.routes.draw do
   end
 
   get "/mybookings", to: "pages#mybookings"
+
+  # resources :users do
+  #   resources :gnomes, only: :index
+  #   # users/:id/gnomes
+  # end
+  get "my_profile", to: "pages#my_profile"
+
 end
