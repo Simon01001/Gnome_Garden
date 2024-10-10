@@ -1,0 +1,14 @@
+.founders-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.founders-card-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+  margin-right: 25px;
+}

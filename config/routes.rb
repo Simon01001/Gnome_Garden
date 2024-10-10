@@ -22,4 +22,5 @@ Rails.application.routes.draw do
 
   get "mygnomes", to: "pages#mygnomes"
   get "mybookings", to: "pages#mybookings"
+  get "meettheteam", to: "pages#meettheteam"
 end
