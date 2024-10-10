@@ -14,9 +14,9 @@
             <p class="card-text"><%= gnome.description %></p>
             <h5 class="card-title">£ <%= gnome.price %></h5>
             <div class="d-flex justify-content-between mt-3">
-              <%= link_to 'More Info', gnome_path(gnome), class: "btn btn-primary btn-sm" %>
-              <%= link_to 'Edit', edit_gnome_path(gnome), class: "btn btn-primary btn-sm" %>
-              <%= link_to 'Remove', gnome_path(gnome), data:{turbo_method: :delete, turbo_confirm: 'are you sure?' }, class: "btn btn-danger btn-sm" %>
+              <%= link_to 'Check me', gnome_path(gnome), class: "btn-green-gnome-card btn-green" %>
+              <%= link_to 'Edit', edit_gnome_path(gnome), class: "btn-green-gnome-card btn-green" %>
+              <%= link_to 'Delete', gnome_path(gnome), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-green btn-red-gnome-card" %>
             </div>
           </div>
         </div>
