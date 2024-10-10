@@ -34,6 +34,11 @@ class GnomesController < ApplicationController
     redirect_to gnome_path(@gnome)
   end
 
+  def destroy
+    @gnome = Gnome.find(params[:id])
+    @gnome.destroy
+    redirect_to mygnomes_path, status: :see_other, notice: 'Gnome was successfully deleted.'
+  end
 
   private
 

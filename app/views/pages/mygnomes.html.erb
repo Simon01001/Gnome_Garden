@@ -11,7 +11,7 @@
             <div class="d-flex justify-content-between mt-3">
               <%= link_to 'More Info', gnome_path(gnome), class: "btn btn-primary btn-sm" %>
               <%= link_to 'Edit', edit_gnome_path(gnome), class: "btn btn-primary btn-sm" %>
-              <%= link_to 'Remove', gnome_path(gnome), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+              <%= link_to 'Remove', gnome_path(gnome), data:{turbo_method: :delete, turbo_confirm: 'are you sure?' }, class: "btn btn-danger btn-sm" %>
             </div>
           </div>
         </div>
