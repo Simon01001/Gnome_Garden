@@ -10,4 +10,7 @@ class PagesController < ApplicationController
     user = current_user
     @bookings = user.bookings
   end
+
+  def meettheteam
+  end
 end
