@@ -1,16 +1,26 @@
-<h1>Here are all of the Gnomes you have booked</h1>
+<div class="title">
+  <h1>Here are all of the Gnomes you have booked</h1>
+</div>
 
-<ul>
-  <% if @bookings.length > 0 %>
-    <% @bookings.each do |booking| %>
-      <li><%= booking.gnome.name %></li>
-      <li><%= booking.gnome.description %></li>
-      <li><%= booking.gnome.price %></li>
-      <li><%= booking.booking_date %></li>
-      <li>You can reach the owner of the Gnome here: <%= booking.gnome.user.email %></li>
-      <li><%= link_to "Delete your booking and make a gnome homeless :'(", gnome_booking_path(booking.gnome, booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+
+<div class="grid_container">
+
+    <% if @bookings.length > 0 %>
+      <% @bookings.each do |booking| %>
+        <div>
+        <%= image_tag(booking.gnome.image_path, class: "card-img-top") %>
+          <div class="card-body">
+            <li><%= booking.gnome.name %></li>
+            <li><%= booking.gnome.description %></li>
+            <li>£<%= booking.gnome.price %></li>
+            <li><%= booking.booking_date %></li>
+            <li>You can reach the owner of the Gnome here: <%= booking.gnome.user.email %></li>
+            <li><%= link_to "Cancel your booking", gnome_booking_path(booking.gnome, booking), class: "btn-green", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <li>You don't have any bookings yet - go and grab a Gnome XD</li>
     <% end %>
-  <% else %>
-    <li>You don't have any bookings yet - go and grab a Gnome XD</li>
-  <% end %>
-</ul>
+
+</div>
