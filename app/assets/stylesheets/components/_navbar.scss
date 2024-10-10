@@ -2,6 +2,7 @@
 .navbar-lewagon {
   margin-top: 0;
   justify-content: space-between;
+  background-color: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,18 +12,6 @@
 .navbar-lewagon .navbar-brand img {
   width: 70px;
   border-radius: 50%;
-}
-
-.btn-green {
-  background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  border-radius: 10px;
-  margin-right: 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
 }
 
 .logo-text {
