@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   #   # users/:id/gnomes
   # end
 
-  get "my_profile", to: "pages#my_profile"
+  get "mygnomes", to: "pages#mygnomes"
   get "mybookings", to: "pages#mybookings"
-
 end
