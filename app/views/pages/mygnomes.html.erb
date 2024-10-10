@@ -1,9 +1,9 @@
-<div class="container">
-  <h1>We have a great selection of gnomes.</h1>
+<h1>Your Private Garden of Gnomes </h1>
 
-  <div class="grid_container">
+  <div class="row">
     <% @gnomes.each do |gnome| %>
-        <div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card mb-4">
           <%# <%= image_tag(gnome.image_path, class: "card-img-top") %>
           <div class="card-body">
             <h5 class="card-title"><%= gnome.name %></h5>
@@ -16,6 +16,6 @@
             </div>
           </div>
         </div>
+      </div>
     <% end %>
   </div>
-</div>
