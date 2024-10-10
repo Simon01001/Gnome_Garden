@@ -1,0 +1,15 @@
+<h1>Here are all of the Gnomes you have booked</h1>
+
+<ul>
+  <% if @bookings.length > 0 %>
+    <% @bookings.each do |booking| %>
+      <li><%= booking.gnome.name %></li>
+      <li><%= booking.gnome.description %></li>
+      <li><%= booking.gnome.price %></li>
+      <li><%= booking.booking_date %></li>
+      <li>You can reach the owner of the Gnome here: <%= booking.gnome.user.email %></li>
+    <% end %>
+  <% else %>
+    <li>You don't have any bookings yet - go and grab a Gnome XD</li>
+  <% end %>
+</ul>

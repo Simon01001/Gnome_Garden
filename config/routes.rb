@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   # end
 
   get "my_profile", to: "pages#my_profile"
+  get "mybookings", to: "pages#mybookings"
 
 end
