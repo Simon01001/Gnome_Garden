@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :gnomes do
     resources :bookings, only: [:create, :destroy]
   end
+
+  get "/mybookings", to: "pages#mybookings"
 end
