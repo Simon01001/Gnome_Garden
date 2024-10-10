@@ -2,8 +2,13 @@
 
   <div class="grid_container">
     <% @gnomes.each do |gnome| %>
-        <div>
-          <%= image_tag(gnome.image_path, class: "card-img-top") %>
+        <div class="card">
+          <% if gnome.image_path.present? %>
+            <%= image_tag(gnome.image_path, class: "card-img-top") %>
+          <% else %>
+            <%= image_tag("logo.png", class: "card-img-top") %>
+          <% end %>
+
           <div class="card-body">
             <h5 class="card-title"><%= gnome.name %></h5>
             <p class="card-text"><%= gnome.description %></p>
