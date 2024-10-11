@@ -1,3 +1,6 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= asset_path('banner.jpg')%>');">
+  <h1>Add a new Gnome</h1>
+</div>
 <%= simple_form_for @gnome do |f| %>
 <%= f.input :name, placeholder: "Your gnomes name:" %>
 <%= f.input :description, placeholder: "A few words about your gnome:" %>
