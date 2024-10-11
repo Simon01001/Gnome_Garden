@@ -7,7 +7,7 @@
 
     <% if @bookings.length > 0 %>
       <% @bookings.each do |booking| %>
-        <div>
+        <div class="card">
         <%= image_tag(booking.gnome.image_path, class: "card-img-top") %>
           <div class="card-body">
             <li><%= booking.gnome.name %></li>
@@ -15,7 +15,7 @@
             <li>£<%= booking.gnome.price %></li>
             <li><%= booking.booking_date %></li>
             <li>You can reach the owner of the Gnome here: <%= booking.gnome.user.email %></li>
-            <li><%= link_to "Cancel your booking", gnome_booking_path(booking.gnome, booking), class: "btn-green", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+            <div class="d-flex justify-content-end mt-3"><%= link_to "Cancel your booking", gnome_booking_path(booking.gnome, booking), class: "btn-green-gnome-card btn-green mt-2", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></div>
           </div>
         </div>
       <% end %>
