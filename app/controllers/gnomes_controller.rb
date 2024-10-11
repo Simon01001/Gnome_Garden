@@ -16,7 +16,7 @@ class GnomesController < ApplicationController
     @gnome = Gnome.new(gnome_params)
     @gnome.user = current_user
     if @gnome.save
-      redirect_to gnomes_path
+      redirect_to mygnomes_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -31,7 +31,7 @@ class GnomesController < ApplicationController
     @gnome = Gnome.find(params[:id])
     @gnome.update(gnome_params)
     # No need for app/views/restaurants/update.html.erb
-    redirect_to gnome_path(@gnome)
+    redirect_to mygnomes_path
   end
 
   def destroy
