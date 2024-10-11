@@ -7,8 +7,10 @@ class PagesController < ApplicationController
   end
 
   def mybookings
-    user = current_user
-    @bookings = user.bookings
+    @bookings = Booking.where(user:current_user)
+
+    # user = current_user
+    # @bookings = user.bookings
   end
 
   def meettheteam
