@@ -16,7 +16,7 @@
             <div class="d-flex justify-content-between mt-3">
               <%= link_to 'Check me', gnome_path(gnome), class: "btn-green-gnome-card btn-green" %>
               <%= link_to 'Edit', edit_gnome_path(gnome), class: "btn-green-gnome-card btn-green" %>
-              <%= link_to 'Delete', gnome_path(gnome), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-green btn-red-gnome-card" %>
+              <%= link_to 'Delete', gnome_path(gnome), class: "btn-green btn-red-gnome-card", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
             </div>
           </div>
         </div>
