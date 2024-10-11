@@ -1,7 +1,7 @@
 .founders-card {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin-bottom: 40px;
 }
@@ -11,4 +11,9 @@
   height: 200px;
   border-radius: 5%;
   margin-right: 25px;
+}
+
+.profile_container {
+  width: 70%;
+  padding: 25px;
 }
