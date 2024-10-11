@@ -1,27 +1,29 @@
-<%= @gnome.name %>
+<div class="show_container d-flex justify-content-center">
 
-<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+<div class="col-8 show_card">
   <div class="card mb-4">
     <div class="card-body">
+      <%= image_tag(@gnome.image_path, class: "card-img-top") %>
       <h5 class="card-title"><%= @gnome.name %></h5>
       <p class="card-text"><%= @gnome.description %></p>
       <h5 class="card-title">£ <%= @gnome.price %></h5>
+      <h4><%= @gnome.name %> has been booked for: </h4>
+      <ul>
+        <% if @gnome.bookings.length > 0 %>
+          <% @gnome.bookings.each do |booking| %>
+            <li><%= booking.booking_date %></li>
+          <% end %>
+        <% else %>
+          <li>Be the first to make a booking!</li>
+        <% end %>
+      </ul>
+      Book me here
+      <div class="d-flex align-items-center">
+        <%= simple_form_for [@gnome, @booking], html: { class: "inline-form" } do |f| %>
+          <%= f.input :booking_date, input_html: { class: "inline-input" }, label: false %>
+          <%= f.submit "Create booking :D", class: "mb-3 btn-green inline-submit btn-green-gnome-card" %>
+        <% end %>
     </div>
   </div>
 </div>
-
-<h2><%= @gnome.name %> has been booked across the following dates: </h2>
-<ul>
-  <% if @gnome.bookings.length > 0 %>
-    <% @gnome.bookings.each do |booking| %>
-      <li><%= booking.booking_date %></li>
-    <% end %>
-  <% else %>
-    <li>Be the first to make a booking!</li>
-  <% end %>
-</ul>
-
-<%= simple_form_for [@gnome, @booking] do |f| %>
-  <%= f.input :booking_date %>
-  <%= f.submit "Create booking :D" %>
-<% end %>
+</div>
