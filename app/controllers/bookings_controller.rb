@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to gnome_path(@gnome)
+      redirect_to mybookings_path
     else
       render :new, status: :unprocessable_entity
     end
